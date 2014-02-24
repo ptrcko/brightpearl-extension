@@ -2,6 +2,7 @@ brightpearl-extension
 =====================
 
 Brightpearl Extension
+
 *Extend the functionality of Brightpearl to reduce human errors and speed up processes*
 
 ### Introduction

@@ -1,0 +1,58 @@
+<NotepadPlus>
+    <Project name="BPExt">
+        <Folder name="css" />
+        <Folder name="icons">
+            <File name="icons\icon128.png" />
+            <File name="icons\icon16.png" />
+            <File name="icons\icon19.png" />
+            <File name="icons\icon48.png" />
+        </Folder>
+        <Folder name="js" />
+        <Folder name="src">
+            <Folder name="bg">
+                <File name="src\bg\background.js" />
+            </Folder>
+            <Folder name="browser_action">
+                <File name="src\browser_action\browser_action.html" />
+            </Folder>
+            <Folder name="inject">
+                <File name="src\inject\inject.js" />
+            </Folder>
+            <Folder name="options_custom">
+                <Folder name="css">
+                    <File name="src\options_custom\css\main.css" />
+                    <File name="src\options_custom\css\setting.css" />
+                </Folder>
+                <Folder name="js">
+                    <Folder name="classes">
+                        <File name="src\options_custom\js\classes\fancy-settings.js" />
+                        <File name="src\options_custom\js\classes\search.js" />
+                        <File name="src\options_custom\js\classes\setting.js" />
+                        <File name="src\options_custom\js\classes\tab.js" />
+                    </Folder>
+                    <File name="src\options_custom\js\i18n.js" />
+                </Folder>
+                <Folder name="lib">
+                    <File name="src\options_custom\lib\default.css" />
+                    <File name="src\options_custom\lib\mootools-core.js" />
+                    <File name="src\options_custom\lib\store.js" />
+                </Folder>
+                <File name="src\options_custom\custom.css" />
+                <File name="src\options_custom\i18n.js" />
+                <File name="src\options_custom\icon.png" />
+                <File name="src\options_custom\index.html" />
+                <File name="src\options_custom\manifest.js" />
+                <File name="src\options_custom\README.md" />
+                <File name="src\options_custom\settings.js" />
+            </Folder>
+            <File name="src\.DS_Store" />
+        </Folder>
+        <Folder name="_locales">
+            <Folder name="en">
+                <File name="_locales\en\messages.json" />
+            </Folder>
+        </Folder>
+        <File name="BPExt" />
+        <File name="manifest.json" />
+    </Project>
+</NotepadPlus>

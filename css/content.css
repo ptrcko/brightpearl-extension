@@ -1,0 +1,34 @@
+.rpts {
+font-weight: bold;
+font-size: 1.3em;
+color: grey;
+text-align:center;
+}
+a.rpts:hover{
+color: darkgrey;
+}
+
+#fastorder{
+margin: 5px 0;
+background-color: #ececec;
+box-sizing: border-box;
+padding: 5px 5px 0;
+width: 95px;
+height: 22px;
+float: left;
+color: #111;
+text-decoration: none;
+font-family: "Helvetica Neue",Arial,Calibri,"Lucida Grande","Liberation Sans",FreeSans,sans-serif;
+font-size: 9px;
+border: 1px solid #ccc;
+cursor: pointer;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+}
+
+#salesWarnings{
+display: block;
+float: right;
+padding: 2px 6px;
+color: red;
+}
