@@ -1,6 +1,6 @@
 this.manifest = {
     "name": "Extension Settings",
-    "icon": "icon.png",
+    "icon": "../../../icons/icon.png",
     "settings": [
 	
 			{
