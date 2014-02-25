@@ -99,12 +99,11 @@ function init(){
 		// Check if we need to set the Update pricelist flag to false
 		if(settings.updatePrices){
 			if (supplierPaymentPage()){
-				if(!document.getElementsByName("update_products_prices")==null){
+
 					document.getElementsByName("update_products_prices")[0].checked = false;	
-				}
-				if(!document.getElementsByName("update_base_prices")==null){
+
 					document.getElementsByName("update_base_prices")[0].checked = false;	
-				}
+
 			}
 		}
 		//Check if we need to insert a fast search for the sales
