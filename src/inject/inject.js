@@ -9,25 +9,29 @@ var orderSearchHTML='input#search_type'
 var ordersDetail = "div.contact-orders-info.widget-info p.links a:nth-child(5)"
 
 	
-var reportURLPart= "report.php?export-limit=500"  //The URL variables which have values. Others are available
-	 +"&output=screen" 
-	 +"&output-old=screen" 
-	 +"&report_zone=sales" 
-	 +"&report_type=orders" 
-	 +"&report_submit=1" 
-	 +"&prev_report_zone=sales" 
-	 +"&prev_report_type=orders" 
-	 +"&type=1" 
-	 +"&date_type=orders_tax_date" 
-	 +"&createdBy=0" 
-	 +"&ship_method=0" 
-	 +"&limit=500" 
- 	 +"&allocation_status=0" 
-	 +"&provisional_amt=0" 
-	 +"&invoiced=1" 
-	 +"&owner_id=0" 
-	 +"&shipping_status=0" 
-	 +"&submit2=Filter+report";
+var reportURLPart= 	 "report.php?results_from=1"
+	 +"&results_to=0"
+	 +"&output=screen"
+	 +"&output-old=screen"
+	 +"&report_type=sales"
+	 +"&report_submit=1"
+	 +"&contact_id=0"
+	 +"&sortby=orders_tax_date"
+	 +"&sort_dir=DESC"
+	 +"&date_type=orders_tax_date"
+	 +"&multiselect_date_type=orders_tax_date"
+	 +"&date_timeframe=custom"
+	 +"&multiselect_date_timeframe=custom"
+	 +"&invoiced=1"
+	 +"&multiselect_invoiced=1"
+	 +"&createdBy=0"
+	 +"&multiselect_createdBy=0"
+	 +"&owner_id=0"
+	 +"&multiselect_owner_id=0"
+	 +"&ship_method=0"
+	 +"&multiselect_ship_method=0"
+	 +"&submit2=Filter"	+"&preset-columns=orders_id%2Corders_invoice_num%2Corders_customer_ref%2Corder_allocation_status_id%2Corder_stock_status_id%2Cshipping_status_id%2Corders_status_name%2Corders_tax_date%2Ccustomers_id%2Corder_amount%2Camount_paid%2Cdate_purchased%2Cactions"
+	 +"&limit=50";
 
 var dateFrom = "&date_from="; //Parameter for start date
 var dateTo = "&date_to="; //Parameter for end date
