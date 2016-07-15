@@ -2,7 +2,7 @@
 "update_url": "https://clients2.google.com/service/update2/crx",
 
   "name": "Brightpearl Extension",
-  "version": "2.12",
+  "version": "2.13",
   "manifest_version": 2,
   "description": "A range of modifications to Brightpearl which extend it's existing functionality. ",
   "homepage_url": "http://www.tamperevident.com.au/brightpearl-extension/",
