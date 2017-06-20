@@ -26,10 +26,10 @@ function getSearchGetOrder(){
 	var url = document.URL;
 
 	// regex to match data centre and version
-	var urlParts = url.match(/https:\/\/(\w*).brightpearl.com\/(\d.\d*.\d{0,2})/);
+	var urlParts = url.match(/https:\/\/(\w*).brightpearl.com\//);
 
 	//Generage the bpBaseURLPart 
-	bpBaseURLPart ="https://" + urlParts[1] + ".brightpearl.com/" + urlParts[2] + "/";
+	bpBaseURLPart ="https://" + urlParts[1] + ".brightpearl.com/";
 	
 	var orderSearch ="patt-op.php?scode=invoice&oID=";
 	var searchValue = document.getElementById("global-search-term").value;

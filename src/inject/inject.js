@@ -39,10 +39,10 @@ var dateTo = "&date_to="; //Parameter for end date
 var url = document.URL;
 
 // regex to match data centre and version
-var urlParts = url.match(/https:\/\/(\w*).brightpearl.com\/(\d.\d*.\d{0,2})/);
+var urlParts = url.match(/https:\/\/(\w*).brightpearl.com\//);
 
 //Generage the bpReportURL 
-bpReportURLPart ="https://" + urlParts[1] + ".brightpearl.com/" + urlParts[2] + "/";
+bpReportURLPart ="https://" + urlParts[1] + ".brightpearl.com/";
 ordersSearch = bpReportURLPart + orderSearch;
 
 
