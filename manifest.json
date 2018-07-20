@@ -2,7 +2,7 @@
 "update_url": "https://clients2.google.com/service/update2/crx",
 
   "name": "Brightpearl Extension",
-  "version": "2.13",
+  "version": "2.15",
   "manifest_version": 2,
   "description": "A range of modifications to Brightpearl which extend it's existing functionality. ",
   "homepage_url": "http://www.tamperevident.com.au/brightpearl-extension/",
@@ -36,7 +36,8 @@
     {
 	  "all_frames": true,
       "matches": [
-        "https://*.brightpearl.com/*"
+        "https://*.brightpearl.com/*",
+        "https://*.brightpearlapp.com/*"
       ],
       "js": [
 	    "src/inject/jquery-1.11.0.min.js",
