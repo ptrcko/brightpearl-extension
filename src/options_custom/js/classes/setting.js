@@ -54,10 +54,12 @@
         },
         
         "get": function () {
+            console.log(this);
             return this.element.get("value");
         },
         
         "set": function (value, noChangeEvent) {
+            console.log(this);
             this.element.set("value", value);
             
             if (noChangeEvent !== true) {

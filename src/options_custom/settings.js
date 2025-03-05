@@ -1,60 +1,35 @@
-window.addEvent("domready", function () {
-    // Option 1: Use the manifest:
+document.addEventListener("DOMContentLoaded", function () {
     new FancySettings.initWithManifest(function (settings) {
-        settings.manifest.myButton.addEvent("action", function () {
-            alert("You clicked me!");
+        const store = new Store("settings"); // Initialize store
+
+        // Load settings from storage
+        chrome.storage.local.get(null, function (storedSettings) {
+            if (chrome.runtime.lastError) {
+                console.error("Error loading settings:", chrome.runtime.lastError);
+                return;
+            }
+
+            console.log("Loaded settings:", storedSettings); // Debugging log
+
+            // Apply stored settings to UI
+            for (let key in storedSettings) {
+                if (settings.manifest[key]) {
+                    settings.manifest[key].set(storedSettings[key]);
+                }
+            }
         });
+
+        // Save settings when changed
+        settings.onChange = function (key, value) {
+            let updateObj = {};
+            updateObj[key] = value;
+            chrome.storage.local.set(updateObj, function () {
+                if (chrome.runtime.lastError) {
+                    console.error("Error saving setting:", key, chrome.runtime.lastError);
+                } else {
+                    console.log("Saved setting:", key, value);
+                }
+            });
+        };
     });
-    
-    // Option 2: Do everything manually:
-    /*
-    var settings = new FancySettings("My Extension", "icon.png");
-    
-    var username = settings.create({
-        "tab": i18n.get("information"),
-        "group": i18n.get("login"),
-        "name": "username",
-        "type": "text",
-        "label": i18n.get("username"),
-        "text": i18n.get("x-characters")
-    });
-    
-    var password = settings.create({
-        "tab": i18n.get("information"),
-        "group": i18n.get("login"),
-        "name": "password",
-        "type": "text",
-        "label": i18n.get("password"),
-        "text": i18n.get("x-characters-pw"),
-        "masked": true
-    });
-    
-    var myDescription = settings.create({
-        "tab": i18n.get("information"),
-        "group": i18n.get("login"),
-        "name": "myDescription",
-        "type": "description",
-        "text": i18n.get("description")
-    });
-    
-    var myButton = settings.create({
-        "tab": "Information",
-        "group": "Logout",
-        "name": "myButton",
-        "type": "button",
-        "label": "Disconnect:",
-        "text": "Logout"
-    });
-    
-    // ...
-    
-    myButton.addEvent("action", function () {
-        alert("You clicked me!");
-    });
-    
-    settings.align([
-        username,
-        password
-    ]);
-    */
 });
